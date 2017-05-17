@@ -11,7 +11,7 @@ var bot = new irc.Client('irc.chat.twitch.tv',process.env.USERNAME, {
     password: pass,
     debug: true,
     showErrors: true,
-    autoRejoin: true, 
+    autoRejoin: true,
     autoConnect: true,
 });
 bot.addListener('error', function(message) {
@@ -20,4 +20,4 @@ bot.addListener('error', function(message) {
 
 bot.addListener('message#' + channel, function (from, message) {
     console.log(from + ' => #' + channel + ': ' + message);
-}
+});

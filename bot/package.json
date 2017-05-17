@@ -1,4 +1,12 @@
 {
+  "name": "geeklybot",
+  "version": "1.0.0",
+  "description": "A very simple bot for GeeklyInc on Twitch",
+  "author": "Matt Spurlin <mattsp1290@gmail.com>",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
   "dependencies": {
     "irc": "^0.5.2"
   }

@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  geeklybot:
+    build: .
+    environment:
+      - USERNAME=twitch_user
+      - CHANNEL=twitch_channel
+      - PASS_PATH=/run/secrets/twitch_pass
+    secrets:
+      - twitch_pass
+
+secrets:
+  twitch_pass:
+    external: true
