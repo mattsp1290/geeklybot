@@ -19,5 +19,10 @@ bot.addListener('error', function(message) {
 });
 
 bot.addListener('message#' + channel, function (from, message) {
+    // TO-DO:
+    // Use an EventEmitter pattern to have separate classes handle different messages
+    // Maybe break apart the message if it is !check stuff
+    // Fire the check event with data {message: message, from: from}
+    // Probably trim off !check from the message first
     console.log(from + ' => #' + channel + ': ' + message);
 });
